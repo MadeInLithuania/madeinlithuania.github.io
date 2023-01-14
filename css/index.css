@@ -14,7 +14,7 @@ header{
     color: white;
 }
 #welcome{
-    height: 100vh;
+    height: 100vh !important;
 }
 #content{
     text-align: center;
