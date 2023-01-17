@@ -14,7 +14,7 @@ header{
     color: white;
 }
 #welcome{
-    height: 100vh !important;
+    height: 90vh !important;
 }
 #content{
     text-align: center;
@@ -24,7 +24,7 @@ footer{
     color: white;
 }
 .art{
-    background-color: #3DD6D0;
+    background-color: #3DD6D0;png
     padding: 5vh 15%;
 }
 #features, #welcome{
@@ -39,4 +39,8 @@ a{
 }
 a:hover{
   color: #4d5154;
+}
+.imglogo{
+    width: 30vh;
+    padding: 10px;
 }
