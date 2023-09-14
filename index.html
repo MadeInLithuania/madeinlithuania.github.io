@@ -1,77 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="robots" content="noindex, nofollow" />
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="img/Transparent2-1.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <title>Riceify</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="css/components/nav.css">
+    <link rel="stylesheet" href="css/components/landing.css">
+    <link rel="stylesheet" href="css/components/palette.css">
+    <link rel="stylesheet" href="css/components/particles.css">
+    <title>My Portfolio</title>
 </head>
 <body>
-    <header>
-        <div id="logo">
-            <img src="img/Transparent1.png" alt="Logo" class="imglogo">
-        </div>
-    </header>
-    <div id="content">
-        <div id="welcome" class="art">
-            <div class="h1 pt-5">Riceify</div>
-            <div class="h2">The first <a href="https://thatnixguy.github.io/posts/ricing/">rice</a> manager.</div>
-            <img src="img/Screenshot_20230108_160129.png" class="img-thumbnail m-3 pb-3 "><br>
-            <div class="btn btn-info p-4" onclick="window.open('https://github.com/ZukiLTU/Riceify')">Get it here.</div>
-        </div>
-        <div id="how" class="art">
-            <div class="h3 text-left">What's <strong>that</strong> ?</div>
-            <div class="p-1">
-                Riceify is a ricing manager made with C++ and used on Unix distros such as Manjaro, Arch, Void, Ubuntu ...<br>
-                It is also lightweight, intuitive and easy to install which makes the manager useful.
-            </div>
-            <div class="p-1">
-                This manager allows you to switch rices easily and without wasting time by editing manually config files and switching by hand. <br>
+    <div class="bg top-0 left-0 w-full h-full flex justify-center items-center flex-col z-10 absolute bg-no-repeat">
+        <div class="flex flex-col justify-center w-full h-full">
+            <div class="flex flex-col justify-center items-center">
+                <img src="img/Transparent1.png" class="w-1/3" alt="Logo"/>
+                <p class="text-4xl text-white pt-5">The first rice manager.</p>
+                <p class="text-2xl text-gray-400 pt-5">Website under reconstruction.</p>
             </div>
         </div>
-        <div id="features" class="art">
-            <div class="h3 text-left">How does it work ?</div>
-            <div class="p-1">
-                <div class="h4">On creation</div>
-                First, it creates a folder with the rice name in <code>~/Riceify/Rices</code>, then it copies the home directory to the rice folder with all hidden files.<br>
-                And, it gets all configurations such as <code>.bashrc, .zsh, i3, polybar</code> and more.
-                <div class="alert alert-warning">Warning : it doesn't copy visible folders !</div>
-                <div class="h4">On switch</div>
-                It will ask you to choose a rice, then it copies the rice folder contents, e.g. <code>~/Riceify/rices/Sample/</code> to your home directory.
-                <img src="https://camo.githubusercontent.com/bb9c97448d20e2a901efa4787eeb93d3a2fdeb4cc325cbd3ba54457d6a3922fe/68747470733a2f2f73332e67696679752e636f6d2f696d616765732f5065656b2d30362d30312d323032332d31332d32372e676966" class="img-fluid">
-                <br/><caption>Demonstration of rice switching.</caption>
-            </div>
-        </div>
-        <div id="installation" class="art">
-            <div class="p-1">
-                <div class="h4">Installation</div>
-                    <div class="h5">By source</div>
-                    <p>
-                        First, clone this repo :<br>
-                        <code>git clone https://github.com/ZukiLTU/Riceify</code><br>
-                        Then, go to the created folder :<br>
-                        <code>cd Riceify</code><br>
-                        Finally, install and run with this command : <br/>
-                        <code>make install</code><br/>
-                        <code>riceify</code>
-                    </p>
-                    <div class="h5">Package (soon)</div>
-                    <p>
-                    <div class="h6">Supported distros :</div>
-
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <div class="p-5 text-center">Made with &hearts;, Riceify - 2023</div>
-        </footer>
-    </body>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/app.js"></script>
+</body>
 </html>
