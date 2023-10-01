@@ -1,77 +1,99 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="img/Transparent2-1.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <title>Riceify</title>
-</head>
-<body>
-    <header>
-        <div id="logo">
-            <img src="img/Transparent1.png" alt="Logo" class="imglogo">
-        </div>
-    </header>
-    <div id="content">
-        <div id="welcome" class="art">
-            <div class="h1 pt-5">Riceify</div>
-            <div class="h2">The first <a href="https://thatnixguy.github.io/posts/ricing/">rice</a> manager.</div>
-            <img src="img/Screenshot_20230108_160129.png" class="img-thumbnail m-3 pb-3 "><br>
-            <div class="btn btn-info p-4" onclick="window.open('https://github.com/ZukiLTU/Riceify')">Get it here.</div>
-        </div>
-        <div id="how" class="art">
-            <div class="h3 text-left">What's <strong>that</strong> ?</div>
-            <div class="p-1">
-                Riceify is a ricing manager made with C++ and used on Unix distros such as Manjaro, Arch, Void, Ubuntu ...<br>
-                It is also lightweight, intuitive and easy to install which makes the manager useful.
-            </div>
-            <div class="p-1">
-                This manager allows you to switch rices easily and without wasting time by editing manually config files and switching by hand. <br>
-            </div>
-        </div>
-        <div id="features" class="art">
-            <div class="h3 text-left">How does it work ?</div>
-            <div class="p-1">
-                <div class="h4">On creation</div>
-                First, it creates a folder with the rice name in <code>~/Riceify/Rices</code>, then it copies the home directory to the rice folder with all hidden files.<br>
-                And, it gets all configurations such as <code>.bashrc, .zsh, i3, polybar</code> and more.
-                <div class="alert alert-warning">Warning : it doesn't copy visible folders !</div>
-                <div class="h4">On switch</div>
-                It will ask you to choose a rice, then it copies the rice folder contents, e.g. <code>~/Riceify/rices/Sample/</code> to your home directory.
-                <img src="https://camo.githubusercontent.com/bb9c97448d20e2a901efa4787eeb93d3a2fdeb4cc325cbd3ba54457d6a3922fe/68747470733a2f2f73332e67696679752e636f6d2f696d616765732f5065656b2d30362d30312d323032332d31332d32372e676966" class="img-fluid">
-                <br/><caption>Demonstration of rice switching.</caption>
-            </div>
-        </div>
-        <div id="installation" class="art">
-            <div class="p-1">
-                <div class="h4">Installation</div>
-                    <div class="h5">By source</div>
-                    <p>
-                        First, clone this repo :<br>
-                        <code>git clone https://github.com/ZukiLTU/Riceify</code><br>
-                        Then, go to the created folder :<br>
-                        <code>cd Riceify</code><br>
-                        Finally, install and run with this command : <br/>
-                        <code>make install</code><br/>
-                        <code>riceify</code>
-                    </p>
-                    <div class="h5">Package (soon)</div>
-                    <p>
-                    <div class="h6">Supported distros :</div>
-
-                    </p>
+    <head>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" href="img/Transparent2-1.ico" />
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/animations.css">
+        <title>Riceify | Your rice manager</title>
+    </head>
+    <body>
+        <div class="bg top-0 left-0 flex justify-center items-center flex-col z-10 bg-no-repeat">
+            <div class="flex flex-col justify-center w-full h-full">
+                <div class="flex flex-col justify-center items-center">
+                    <img src="img/Transparent1.png" class="md:w-1/3 max-md:w-10/12" alt="Logo"/>
+                    <h1 class="text-4xl text-white p-5 pb-0">The first rice manager.</h1>
+                    <button onclick="(() => window.location.href = 'https://github.com/ZukiLTU/Riceify')" class="bg-transparent hover:bg-white text-white font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded mt-5 mb-5 duration-700">Download</button>
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="p-5 text-center">Made with &hearts;, Riceify - 2023</div>
-        </footer>
+        <div class="text-center items-center justify-content-center" id="content">
+            <section id="pres">
+                <p class="text-2xl pt-10">Changing between <a href="https://www.reddit.com/r/unixporn/wiki/themeing/dictionary/#wiki_rice" class="text-orange-400 underline hover:text-orange-500 duration-150">rices</a> was never so easy !</p>
+                <div class="flex flex-col flex-wrap content-center mt-10">
+                    <img src="img/hyprland-my-rice-with-pink-and-green-color-scheme-v0-56zdw4d3z8ob1.png" class="w-2/4" style="height: 24rem;">
+                    <div class="flex flex-row items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-arrow-down block m-auto mt-5 mb-5" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                        </svg>
+                    </div>
+                    <img src="img/hyprland-first-rice-v0-2e84t1ahmnnb1.png" class="w-2/4" style="height: 24rem;">
+                </div>
+                <p class="mt-5">... very quickly !</p>
+                <svg class="svg-divider h-56 w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <polygon class="svg-polygon" fill="#151515" points="0,100 100,0 100,100" />
+                </svg>
+            </section>
+            <section id="inst" class="flex flex-col items-center">
+                <h2 class="text-2xl">Installation</h2>
+                <h3 class="mt-3">Install by source</h3>
+                <div class="mt-3 code p-5 w-fit">
+                    git clone https://github.com/ZukiLTU/Riceify<br>
+                    cd Riceify<br>
+                    make install<br>
+                </div>
+                <h3 class="mt-3">Install by package</h3>
+                <div class="mt-3 code p-5 w-fit">
+                    Soon ...
+                </div>
+                <p class="mt-3">See changelogs <a href="https://www.reddit.com/r/unixporn/wiki/themeing/dictionary/#wiki_rice" class="text-orange-400 underline hover:text-orange-500 duration-150">here</a>.</p>
+                <svg class="svg-divider h-56 w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <polygon class="svg-polygon" fill="#292929" points="0,100 100,0 100,100" />
+                </svg>
+            </section>
+            <section id="features">
+                <h2 class="text-2xl">Features</h2>
+                <ul class="list-inside" style="list-style-type: circle;">
+                    <li>Change your rice in one click</li>
+                    <li>Save your rices</li>
+                    <li>Load rice from folder</li>
+                    <li>And way more ...</li>
+                </ul>
+                <h2 class="text-2xl mt-3">Coming soon</h2>
+                <ul class="list-inside" style="list-style-type: circle;">
+                    <li>Polybar support</li>
+                    <li>GUI / Console version</li>
+                    <li>Public rice repository</li>
+                </ul>
+                <button class="bg-transparent hover:bg-white text-white hover:text-black py-2 px-4 border border-white hover:border-transparent rounded mt-5 mb-5 duration-700">See more</button>
+                <svg class="svg-divider h-56 w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <polygon class="svg-polygon" fill="#000" points="0,100 100,0 100,100" />
+                </svg>
+            </section>
+            <footer>
+                <p>Riceify is a free and open-source software under the MIT license.</p>
+                <hr class="w-1/2 inline-flex" />
+                <div class="flex flex-col">
+                    <div>
+                        <ul>
+                            <li><a href="" class="hover:text-orange-500 duration-150">Issues</a></li>
+                            <li><a href="" class="hover:text-orange-500 duration-150">Kanban</a></li>
+                            <li><a href="" class="hover:text-orange-500 duration-150">Releases</a></li>
+                            <li><a href="" class="hover:text-orange-500 duration-150">Contributors</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/loader.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>
