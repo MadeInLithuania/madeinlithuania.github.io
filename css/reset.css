@@ -1,48 +1,753 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* CSS Reset - Modern Reset for Riceify Website */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol, ul {
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
     list-style: none;
 }
-blockquote, q {
-    quotes: none;
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
+
+html,
+body {
+    height: 100%;
 }
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Remove default button styles */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Remove default input styles */
+input,
+textarea {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+/* Remove default table styles */
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+/* Remove default fieldset styles */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Remove default legend styles */
+legend {
+    padding: 0;
+}
+
+/* Remove default details styles */
+details {
+    display: block;
+}
+
+/* Remove default summary styles */
+summary {
+    display: list-item;
+}
+
+/* Remove default template styles */
+template {
+    display: none;
+}
+
+/* Remove default hidden styles */
+[hidden] {
+    display: none !important;
+}
+
+/* Remove default form styles */
+form {
+    margin: 0;
+}
+
+/* Remove default label styles */
+label {
+    cursor: pointer;
+}
+
+/* Remove default select styles */
+select {
+    cursor: pointer;
+}
+
+/* Remove default textarea styles */
+textarea {
+    resize: vertical;
+}
+
+/* Remove default progress styles */
+progress {
+    vertical-align: baseline;
+}
+
+/* Remove default meter styles */
+meter {
+    vertical-align: baseline;
+}
+
+/* Remove default hr styles */
+hr {
+    border: none;
+    height: 1px;
+    background-color: currentColor;
+    opacity: 0.2;
+}
+
+/* Remove default pre styles */
+pre {
+    font-family: monospace;
+    white-space: pre;
+}
+
+/* Remove default code styles */
+code {
+    font-family: monospace;
+}
+
+/* Remove default kbd styles */
+kbd {
+    font-family: monospace;
+}
+
+/* Remove default samp styles */
+samp {
+    font-family: monospace;
+}
+
+/* Remove default small styles */
+small {
+    font-size: 80%;
+}
+
+/* Remove default sub and sup styles */
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/* Remove default abbr styles */
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline dotted;
+}
+
+/* Remove default acronym styles */
+acronym {
+    border-bottom: none;
+    text-decoration: underline dotted;
+}
+
+/* Remove default address styles */
+address {
+    font-style: normal;
+}
+
+/* Remove default blockquote styles */
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default cite styles */
+cite {
+    font-style: normal;
+}
+
+/* Remove default dfn styles */
+dfn {
+    font-style: normal;
+}
+
+/* Remove default em styles */
+em {
+    font-style: normal;
+}
+
+/* Remove default i styles */
+i {
+    font-style: normal;
+}
+
+/* Remove default strong styles */
+strong {
+    font-weight: normal;
+}
+
+/* Remove default b styles */
+b {
+    font-weight: normal;
+}
+
+/* Remove default mark styles */
+mark {
+    background-color: transparent;
+    color: inherit;
+}
+
+/* Remove default q styles */
+q {
+    quotes: none;
+}
+
+q::before,
+q::after {
+    content: '';
+    content: none;
+}
+
+/* Remove default s styles */
+s {
+    text-decoration: none;
+}
+
+/* Remove default strike styles */
+strike {
+    text-decoration: none;
+}
+
+/* Remove default u styles */
+u {
+    text-decoration: none;
+}
+
+/* Remove default var styles */
+var {
+    font-style: normal;
+}
+
+/* Remove default wbr styles */
+wbr {
+    word-break: normal;
+}
+
+/* Remove default ruby styles */
+ruby {
+    ruby-position: normal;
+}
+
+/* Remove default rt styles */
+rt {
+    ruby-position: normal;
+}
+
+/* Remove default rp styles */
+rp {
+    ruby-position: normal;
+}
+
+/* Remove default bdi styles */
+bdi {
+    direction: ltr;
+}
+
+/* Remove default bdo styles */
+bdo {
+    direction: ltr;
+}
+
+/* Remove default data styles */
+data {
+    font-variant-numeric: normal;
+}
+
+/* Remove default time styles */
+time {
+    font-variant-numeric: normal;
+}
+
+/* Remove default output styles */
+output {
+    display: inline;
+}
+
+/* Remove default picture styles */
+picture {
+    display: block;
+}
+
+/* Remove default source styles */
+source {
+    display: none;
+}
+
+/* Remove default track styles */
+track {
+    display: none;
+}
+
+/* Remove default map styles */
+map {
+    display: inline;
+}
+
+/* Remove default area styles */
+area {
+    display: none;
+}
+
+/* Remove default embed styles */
+embed {
+    display: block;
+}
+
+/* Remove default object styles */
+object {
+    display: block;
+}
+
+/* Remove default param styles */
+param {
+    display: none;
+}
+
+/* Remove default iframe styles */
+iframe {
+    border: none;
+}
+
+/* Remove default frame styles */
+frame {
+    border: none;
+}
+
+/* Remove default frameset styles */
+frameset {
+    border: none;
+}
+
+/* Remove default noframes styles */
+noframes {
+    display: none;
+}
+
+/* Remove default applet styles */
+applet {
+    display: block;
+}
+
+/* Remove default basefont styles */
+basefont {
+    font-size: medium;
+    font-family: serif;
+}
+
+/* Remove default center styles */
+center {
+    text-align: left;
+}
+
+/* Remove default dir styles */
+dir {
+    list-style-type: disc;
+}
+
+/* Remove default font styles */
+font {
+    font-size: medium;
+    font-family: serif;
+}
+
+/* Remove default isindex styles */
+isindex {
+    display: none;
+}
+
+/* Remove default listing styles */
+listing {
+    font-family: monospace;
+    white-space: pre;
+}
+
+/* Remove default plaintext styles */
+plaintext {
+    font-family: monospace;
+    white-space: pre;
+}
+
+/* Remove default xmp styles */
+xmp {
+    font-family: monospace;
+    white-space: pre;
+}
+
+/* Remove default blink styles */
+blink {
+    animation: none;
+}
+
+/* Remove default marquee styles */
+marquee {
+    animation: none;
+}
+
+/* Remove default multicol styles */
+multicol {
+    column-count: 1;
+    column-gap: normal;
+    column-rule: none;
+}
+
+/* Remove default nobr styles */
+nobr {
+    white-space: normal;
+}
+
+/* Remove default spacer styles */
+spacer {
+    display: none;
+}
+
+/* Remove default tt styles */
+tt {
+    font-family: monospace;
+}
+
+/* Remove default big styles */
+big {
+    font-size: larger;
+}
+
+/* Remove default small styles */
+small {
+    font-size: smaller;
+}
+
+/* Remove default strike styles */
+strike {
+    text-decoration: line-through;
+}
+
+/* Remove default u styles */
+u {
+    text-decoration: underline;
+}
+
+/* Remove default s styles */
+s {
+    text-decoration: line-through;
+}
+
+/* Remove default del styles */
+del {
+    text-decoration: line-through;
+}
+
+/* Remove default ins styles */
+ins {
+    text-decoration: underline;
+}
+
+/* Remove default mark styles */
+mark {
+    background-color: yellow;
+    color: black;
+}
+
+/* Remove default bdi styles */
+bdi {
+    direction: inherit;
+}
+
+/* Remove default bdo styles */
+bdo {
+    direction: inherit;
+}
+
+/* Remove default ruby styles */
+ruby {
+    ruby-position: over;
+}
+
+/* Remove default rt styles */
+rt {
+    ruby-position: over;
+}
+
+/* Remove default rp styles */
+rp {
+    ruby-position: over;
+}
+
+/* Remove default data styles */
+data {
+    font-variant-numeric: normal;
+}
+
+/* Remove default time styles */
+time {
+    font-variant-numeric: normal;
+}
+
+/* Remove default output styles */
+output {
+    display: inline;
+}
+
+/* Remove default picture styles */
+picture {
+    display: block;
+}
+
+/* Remove default source styles */
+source {
+    display: none;
+}
+
+/* Remove default track styles */
+track {
+    display: none;
+}
+
+/* Remove default map styles */
+map {
+    display: inline;
+}
+
+/* Remove default area styles */
+area {
+    display: none;
+}
+
+/* Remove default embed styles */
+embed {
+    display: block;
+}
+
+/* Remove default object styles */
+object {
+    display: block;
+}
+
+/* Remove default param styles */
+param {
+    display: none;
+}
+
+/* Remove default iframe styles */
+iframe {
+    border: none;
+}
+
+/* Remove default frame styles */
+frame {
+    border: none;
+}
+
+/* Remove default frameset styles */
+frameset {
+    border: none;
+}
+
+/* Remove default noframes styles */
+noframes {
+    display: none;
+}
+
+/* Remove default applet styles */
+applet {
+    display: block;
+}
+
+/* Remove default basefont styles */
+basefont {
+    font-size: medium;
+    font-family: serif;
+}
+
+/* Remove default center styles */
+center {
+    text-align: left;
+}
+
+/* Remove default dir styles */
+dir {
+    list-style-type: disc;
+}
+
+/* Remove default font styles */
+font {
+    font-size: medium;
+    font-family: serif;
+}
+
+/* Remove default isindex styles */
+isindex {
+    display: none;
+}
+
+/* Remove default listing styles */
+listing {
+    font-family: monospace;
+    white-space: pre;
+}
+
+/* Remove default plaintext styles */
+plaintext {
+    font-family: monospace;
+    white-space: pre;
+}
+
+/* Remove default xmp styles */
+xmp {
+    font-family: monospace;
+    white-space: pre;
+}
+
+/* Remove default blink styles */
+blink {
+    animation: none;
+}
+
+/* Remove default marquee styles */
+marquee {
+    animation: none;
+}
+
+/* Remove default multicol styles */
+multicol {
+    column-count: 1;
+    column-gap: normal;
+    column-rule: none;
+}
+
+/* Remove default nobr styles */
+nobr {
+    white-space: normal;
+}
+
+/* Remove default spacer styles */
+spacer {
+    display: none;
+}
+
+/* Remove default tt styles */
+tt {
+    font-family: monospace;
+}
+
+/* Remove default big styles */
+big {
+    font-size: larger;
+}
+
+/* Remove default small styles */
+small {
+    font-size: smaller;
+}
+
+/* Remove default strike styles */
+strike {
+    text-decoration: line-through;
+}
+
+/* Remove default u styles */
+u {
+    text-decoration: underline;
+}
+
+/* Remove default s styles */
+s {
+    text-decoration: line-through;
+}
+
+/* Remove default del styles */
+del {
+    text-decoration: line-through;
+}
+
+/* Remove default ins styles */
+ins {
+    text-decoration: underline;
+}
+
+/* Remove default mark styles */
+mark {
+    background-color: yellow;
+    color: black;
+} 
