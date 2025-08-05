@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta name="robots" content="noindex, nofollow" />
@@ -7,85 +6,365 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="icon" href="img/Transparent2-1.ico" />
-        <link rel="stylesheet" href="../css/index.css">
-        <link rel="stylesheet" href="../css/reset.css">
-        <link rel="stylesheet" href="../css/animations.css">
-        <title>Riceify | Your rice manager</title>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <title>Riceify | Modern Rice Manager with Performance & Logging</title>
+        <meta name="description" content="Riceify - The ultimate rice manager for Linux. Fast, efficient, and feature-rich with intelligent caching, async operations, and comprehensive logging.">
     </head>
     <body>
+        <!-- Hero Section -->
         <div class="bg top-0 left-0 flex justify-center items-center flex-col z-10 bg-no-repeat">
             <div class="flex flex-col justify-center w-full h-full">
                 <div class="flex flex-col justify-center items-center">
-                    <img src="img/Transparent1.png" class="md:w-1/3 max-md:w-10/12" alt="Logo"/>
-                    <h1 class="md:text-4xl text-white p-5 pb-0 max-md:text-2xl">The first rice manager.</h1>
-                    <button onclick="(() => window.location.href = 'https://github.com/ZukiLTU/Riceify')" class="bg-transparent hover:bg-white text-white font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded mt-5 mb-5 duration-700">Download</button>
+                    <img src="img/Transparent1.png" class="md:w-1/3 max-md:w-10/12 animate-fade-in" alt="Riceify Logo"/>
+                    <h1 class="md:text-5xl text-white p-5 pb-0 max-md:text-3xl font-bold animate-slide-up">The Ultimate Rice Manager</h1>
+                    <p class="text-white text-xl mt-2 mb-5 text-center max-w-2xl animate-slide-up-delay">
+                        Fast, efficient, and intelligent rice management with performance optimizations and comprehensive logging
+                    </p>
+                    <div class="flex gap-4 flex-wrap justify-center">
+                        <button onclick="(() => window.location.href = 'https://github.com/MadeInLithuania/Riceify')" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 animate-slide-up-delay-2">
+                            <span class="flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                </svg>
+                                View on GitHub
+                            </span>
+                        </button>
+                        <button onclick="scrollToSection('installation')" class="bg-transparent hover:bg-white text-white font-semibold py-3 px-6 border-2 border-white hover:text-black rounded-lg transition-all duration-300 transform hover:scale-105 animate-slide-up-delay-3">
+                            <span class="flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Get Started
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Main Content -->
         <div class="text-center items-center justify-content-center" id="content">
-            <section id="pres">
-                <p class="text-2xl pt-10">Changing between <a href="https://www.reddit.com/r/unixporn/wiki/themeing/dictionary/#wiki_rice" class="text-orange-400 underline hover:text-orange-500 duration-150">rices</a> was never so easy !</p>
-                <div class="flex flex-col flex-wrap content-center mt-10">
-                    <img src="img/hyprland-my-rice-with-pink-and-green-color-scheme-v0-56zdw4d3z8ob1.png" class="w-2/4" style="height: 24rem;">
-                    <div class="flex flex-row items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-arrow-down block m-auto mt-5 mb-5" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
-                        </svg>
+            
+            <!-- Presentation Section -->
+            <section id="pres" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+                <div class="container mx-auto px-4">
+                    <p class="text-3xl pt-10 text-white font-light">
+                        Changing between <a href="https://www.reddit.com/r/unixporn/wiki/themeing/dictionary/#wiki_rice" class="text-orange-400 underline hover:text-orange-300 duration-150 font-semibold">rices</a> was never so easy!
+                    </p>
+                    <div class="flex flex-col flex-wrap content-center mt-16">
+                        <div class="rice-comparison">
+                            <img src="img/hyprland-my-rice-with-pink-and-green-color-scheme-v0-56zdw4d3z8ob1.png" class="rice-image" alt="Rice Example 1">
+                            <div class="flex flex-row items-center justify-center my-8">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-down text-orange-400 animate-bounce" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                                </svg>
+                            </div>
+                            <img src="img/hyprland-first-rice-v0-2e84t1ahmnnb1.png" class="rice-image" alt="Rice Example 2">
+                        </div>
+                        <p class="mt-8 text-xl text-orange-400 font-semibold">... very quickly!</p>
                     </div>
-                    <img src="img/hyprland-first-rice-v0-2e84t1ahmnnb1.png" class="w-2/4" style="height: 24rem;">
                 </div>
-                <p class="mt-5">... very quickly !</p>
-                <svg class="svg-divider h-56 w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <polygon class="svg-polygon" fill="#151515" points="0,100 100,0 100,100" />
-                </svg>
             </section>
-            <section id="inst" class="flex flex-col items-center">
-                <h2 class="text-2xl">Installation</h2>
-                <h3 class="mt-3">Install by source</h3>
-                <div class="mt-3 code p-5 w-fit">
-                    git clone https://github.com/ZukiLTU/Riceify<br>
-                    cd Riceify<br>
-                    make install<br>
+
+            <!-- Installation Section -->
+            <section id="inst" class="flex flex-col items-center py-20 bg-gray-900">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-4xl text-white font-bold mb-8">Installation</h2>
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl">
+                        <div class="installation-method">
+                            <h3 class="text-2xl text-orange-400 font-semibold mb-4">Install by Source</h3>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span class="code-title">Terminal</span>
+                                </div>
+                                <div class="code-content">
+                                    <code>
+                                        git clone https://github.com/MadeInLithuania/Riceify<br>
+                                        cd Riceify<br>
+                                        mkdir build && cd build<br>
+                                        cmake ..<br>
+                                        make -j$(nproc)<br>
+                                        sudo make install<br>
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="installation-method">
+                            <h3 class="text-2xl text-orange-400 font-semibold mb-4">Quick Install</h3>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span class="code-title">One-liner</span>
+                                </div>
+                                <div class="code-content">
+                                    <code>
+                                        curl -sSL https://raw.githubusercontent.com/MadeInLithuania/Riceify/main/install.sh | bash<br>
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h3 class="text-2xl text-orange-400 font-semibold mb-4">Performance Build</h3>
+                        <div class="code-block max-w-2xl mx-auto">
+                            <div class="code-header">
+                                <span class="code-title">Optimized Build</span>
+                            </div>
+                            <div class="code-content">
+                                <code>
+                                    chmod +x build.sh<br>
+                                    ./build.sh<br>
+                                    # Creates optimized builds in build/release/ and build/max_opt/<br>
+                                </code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mt-8 text-gray-300">See <a href="https://github.com/MadeInLithuania/Riceify/releases" class="text-orange-400 underline hover:text-orange-300 duration-150">releases</a> for changelogs and updates.</p>
                 </div>
-                <h3 class="mt-3">Install by package</h3>
-                <div class="mt-3 code p-5 w-fit">
-                    Soon ...
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" class="py-20 bg-gray-800">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-4xl text-white font-bold mb-12">Features</h2>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <!-- Core Features -->
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Core Functionality</h3>
+                            <ul class="text-left space-y-2">
+                                <li class="flex items-center">
+                                    <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Change your rice in one click
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Save and manage multiple rices
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Load rice from any folder
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Performance Features -->
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Performance Optimizations</h3>
+                            <ul class="text-left space-y-2">
+                                <li class="flex items-center">
+                                    <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Intelligent caching system
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Async file operations
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Smart memory management
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Logging Features -->
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Comprehensive Logging</h3>
+                            <ul class="text-left space-y-2">
+                                <li class="flex items-center">
+                                    <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Real-time performance tracking
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Thread-safe logging system
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Detailed error reporting
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Coming Soon Section -->
+                    <div class="mt-16">
+                        <h2 class="text-3xl text-white font-bold mb-8">Coming Soon</h2>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                            <div class="coming-soon-card">
+                                <div class="coming-soon-icon">
+                                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <span>Polybar Support</span>
+                            </div>
+                            <div class="coming-soon-card">
+                                <div class="coming-soon-icon">
+                                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span>GUI Version</span>
+                            </div>
+                            <div class="coming-soon-card">
+                                <div class="coming-soon-icon">
+                                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                    </svg>
+                                </div>
+                                <span>Rice Repository</span>
+                            </div>
+                            <div class="coming-soon-card">
+                                <div class="coming-soon-icon">
+                                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span>Cloud Sync</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12">
+                        <button onclick="scrollToSection('documentation')" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                            <span class="flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                View Documentation
+                            </span>
+                        </button>
+                    </div>
                 </div>
-                <p class="mt-3">See changelogs <a href="https://www.reddit.com/r/unixporn/wiki/themeing/dictionary/#wiki_rice" class="text-orange-400 underline hover:text-orange-500 duration-150">here</a>.</p>
-                <svg class="svg-divider h-56 w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <polygon class="svg-polygon" fill="#292929" points="0,100 100,0 100,100" />
-                </svg>
             </section>
-            <section id="features">
-                <h2 class="text-2xl">Features</h2>
-                <ul class="list-inside" style="list-style-type: circle;">
-                    <li>Change your rice in one click</li>
-                    <li>Save your rices</li>
-                    <li>Load rice from folder</li>
-                    <li>And way more ...</li>
-                </ul>
-                <h2 class="text-2xl mt-3">Coming soon</h2>
-                <ul class="list-inside" style="list-style-type: circle;">
-                    <li>Polybar support</li>
-                    <li>GUI / Console version</li>
-                    <li>Public rice repository</li>
-                </ul>
-                <button class="bg-transparent hover:bg-white text-white hover:text-black py-2 px-4 border border-white hover:border-transparent rounded mt-5 mb-5 duration-700">See more</button>
-                <svg class="svg-divider h-56 w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <polygon class="svg-polygon" fill="#000" points="0,100 100,0 100,100" />
-                </svg>
+
+            <!-- Documentation Section -->
+            <section id="documentation" class="py-20 bg-black">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-4xl text-white font-bold mb-12 text-center">Documentation</h2>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <div class="doc-card">
+                            <div class="doc-icon">
+                                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Performance Guide</h3>
+                            <p class="text-gray-300 mb-4">Learn about the performance optimizations and benchmarks that make Riceify lightning fast.</p>
+                            <a href="PERFORMANCE.md" class="text-orange-400 hover:text-orange-300 transition-colors">Read More →</a>
+                        </div>
+
+                        <div class="doc-card">
+                            <div class="doc-icon">
+                                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Logging System</h3>
+                            <p class="text-gray-300 mb-4">Comprehensive guide to the logging system for debugging and performance monitoring.</p>
+                            <a href="LOGGING.md" class="text-orange-400 hover:text-orange-300 transition-colors">Read More →</a>
+                        </div>
+
+                        <div class="doc-card">
+                            <div class="doc-icon">
+                                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Backup Strategy</h3>
+                            <p class="text-gray-300 mb-4">Understand the intelligent backup strategy and what files are included/excluded.</p>
+                            <a href="BACKUP_STRATEGY.md" class="text-orange-400 hover:text-orange-300 transition-colors">Read More →</a>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <footer>
-                <p>Riceify is a free and open-source software under the MIT license.</p>
-                <hr class="w-1/2 inline-flex" />
-                <div class="flex flex-col">
-                    <div>
-                        <ul>
-                            <li><a href="https://github.com/ZukiLTU/Riceify/issues" class="hover:text-orange-500 duration-150">Issues</a></li>
-                            <li><a href="https://github.com/users/ZukiLTU/projects/8" class="hover:text-orange-500 duration-150">Kanban</a></li>
-                            <li><a href="https://github.com/ZukiLTU/Riceify/releases" class="hover:text-orange-500 duration-150">Releases</a></li>
-                            <li><a href="" class="hover:text-orange-500 duration-150">Contributors</a></li>
-                        </ul>
+
+            <!-- Footer -->
+            <footer class="py-12 bg-gray-900">
+                <div class="container mx-auto px-4 text-center">
+                    <p class="text-gray-400 mb-6">Riceify is a free and open-source software under the MIT license.</p>
+                    <hr class="w-1/2 mx-auto mb-8 border-gray-700" />
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                        <div class="footer-section">
+                            <h4 class="text-white font-semibold mb-4">Development</h4>
+                            <ul class="space-y-2">
+                                <li><a href="https://github.com/MadeInLithuania/Riceify/issues" class="text-gray-400 hover:text-orange-400 transition-colors">Issues</a></li>
+                                <li><a href="https://github.com/users/MadeInLithuania/projects/8" class="text-gray-400 hover:text-orange-400 transition-colors">Kanban</a></li>
+                                <li><a href="https://github.com/MadeInLithuania/Riceify/releases" class="text-gray-400 hover:text-orange-400 transition-colors">Releases</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4 class="text-white font-semibold mb-4">Community</h4>
+                            <ul class="space-y-2">
+                                <li><a href="https://github.com/MadeInLithuania/Riceify" class="text-gray-400 hover:text-orange-400 transition-colors">GitHub</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-orange-400 transition-colors">Contributors</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-orange-400 transition-colors">Discord</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4 class="text-white font-semibold mb-4">Resources</h4>
+                            <ul class="space-y-2">
+                                <li><a href="README.md" class="text-gray-400 hover:text-orange-400 transition-colors">Documentation</a></li>
+                                <li><a href="PERFORMANCE.md" class="text-gray-400 hover:text-orange-400 transition-colors">Performance</a></li>
+                                <li><a href="LOGGING.md" class="text-gray-400 hover:text-orange-400 transition-colors">Logging</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4 class="text-white font-semibold mb-4">Support</h4>
+                            <ul class="space-y-2">
+                                <li><a href="https://github.com/MadeInLithuania/Riceify/issues/new" class="text-gray-400 hover:text-orange-400 transition-colors">Report Bug</a></li>
+                                <li><a href="https://github.com/MadeInLithuania/Riceify/discussions" class="text-gray-400 hover:text-orange-400 transition-colors">Discussions</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-orange-400 transition-colors">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-8 border-t border-gray-700">
+                        <p class="text-gray-500">Made with ❤️ by <a href="https://github.com/MadeInLithuania" class="text-orange-400 hover:text-orange-300">ZukiLTU</a></p>
                     </div>
                 </div>
             </footer>
@@ -97,4 +376,4 @@
         <script src="js/loader.js"></script>
         <script src="js/app.js"></script>
     </body>
-</html>
+</html> 
