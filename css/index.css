@@ -133,7 +133,6 @@ button {
     margin-bottom: 1rem;
     font-size: 1.25rem;
 }
-
 .feature-card ul {
     list-style: none;
     padding: 0;
@@ -233,6 +232,7 @@ button {
 /* Installation Methods */
 .installation-method {
     text-align: left;
+    width: -webkit-fill-available;
 }
 
 .installation-method h3 {
@@ -426,5 +426,4 @@ a:focus {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color);
-
 } 
